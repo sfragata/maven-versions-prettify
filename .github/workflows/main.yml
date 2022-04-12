@@ -26,7 +26,7 @@ jobs:
           echo "go test for ${{ matrix.os }} and version ${{ matrix.go_version }}".
           go test -v ./... -cover -race
           go build -v -o ${{ github.workspace }}/dist/maven-versions-prettify-${{ matrix.os }} main.go
-          ls -la 
+          ls -la ${{ github.workspace }}/dist/
       - name: upload artifacts
         uses: actions/upload-artifact@v2
         with: 
