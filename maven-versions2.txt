@@ -1,0 +1,2018 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] activite-connector                                                 [pom]
+[INFO] activite-connector-model                                           [jar]
+[INFO] activite-connector-core                                            [jar]
+[INFO] activite-connector-rest                                            [jar]
+[INFO] 
+[INFO] ---------------< com.sepaq.connector:activite-connector >---------------
+[INFO] Building activite-connector 4.2.0                                  [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.8.1:display-dependency-updates (default-cli) @ activite-connector ---
+[INFO] The following dependencies in Dependency Management have newer versions:
+[INFO]   ch.qos.logback:logback-access ................. 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-classic ................ 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-core ................... 1.1.7 -> 1.3.0-alpha12
+[INFO]   com.atomikos:transactions-jdbc ...................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jms ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jta ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.couchbase.client:couchbase-spring-cache ........... 2.0.0 -> 2.1.0
+[INFO]   com.couchbase.client:java-client ..................... 2.2.8 -> 2.7.22
+[INFO]   com.datastax.cassandra:cassandra-driver-core ...... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-dse ....... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-mapping ... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.fasterxml:classmate ............................... 1.3.1 -> 1.5.1
+[INFO]   com.fasterxml.jackson.core:jackson-annotations ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-core .............. 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-databind .......... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-cbor ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-csv ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-smile ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-xml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-yaml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-guava ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate4 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate5 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jaxrs ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jdk8 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-joda ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-json-org ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jsr310 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-base ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-jaxb-annotations ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-kotlin ... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-parameter-names ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.github.ben-manes.caffeine:caffeine ................ 2.3.3 -> 2.9.2
+[INFO]   com.google.code.gson:gson ............................... 2.7 -> 2.8.9
+[INFO]   com.hazelcast:hazelcast .......................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.hazelcast:hazelcast-hibernate4 .................... 3.6.5 -> 3.8.4
+[INFO]   com.hazelcast:hazelcast-spring ................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.jayway.jsonpath:json-path ......................... 2.2.0 -> 2.6.0
+[INFO]   com.jayway.jsonpath:json-path-assert .................. 2.2.0 -> 2.6.0
+[INFO]   com.querydsl:querydsl-apt .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-collections .................. 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-core ......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-jpa .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-mongodb ...................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.samskivert:jmustache ................................ 1.12 -> 1.15
+[INFO]   com.sun.mail:javax.mail ............................... 1.5.6 -> 1.6.2
+[INFO]   com.zaxxer:HikariCP ................................... 2.4.7 -> 2.7.9
+[INFO]   commons-codec:commons-codec ............................. 1.10 -> 1.15
+[INFO]   io.dropwizard.metrics:metrics-core ............. 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-ganglia ................. 3.1.2 -> 3.2.6
+[INFO]   io.dropwizard.metrics:metrics-graphite ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-servlets ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.projectreactor:reactor-core ............ 2.0.8.RELEASE -> 3.0.0.RC1
+[INFO]   io.searchbox:jest ..................................... 2.0.3 -> 2.4.0
+[INFO]   io.undertow:undertow-core ................ 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-servlet ............. 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-websockets-jsr ...... 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   javax.cache:cache-api ................................. 1.0.0 -> 1.1.1
+[INFO]   javax.mail:javax.mail-api ............................. 1.5.6 -> 1.6.2
+[INFO]   javax.servlet:javax.servlet-api ................... 3.1.0 -> 4.0.0-b07
+[INFO]   javax.transaction:javax.transaction-api ................... 1.2 -> 1.3
+[INFO]   jaxen:jaxen ........................................... 1.1.6 -> 1.2.0
+[INFO]   joda-time:joda-time ................................. 2.9.4 -> 2.10.13
+[INFO]   junit:junit ........................................... 4.12 -> 4.13.2
+[INFO]   net.java.dev.jna:jna .................................. 4.2.2 -> 4.5.2
+[INFO]   net.sourceforge.htmlunit:htmlunit ..................... 2.21 -> 2.57.0
+[INFO]   org.apache.activemq:activemq-amqp ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-blueprint .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-broker ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-camel .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-client ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-console ................ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-http ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jaas ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jdbc-store ............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jms-pool ............... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-kahadb-store ........... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-karaf .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-leveldb-store .......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-log4j-appender ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-mqtt ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-generator ..... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-legacy ........ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-osgi ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-partition .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-pool ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-ra ..................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-run .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-runtime-config ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-shiro .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-spring ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-stomp .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-web .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:artemis-amqp-protocol ............. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-commons ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-core-client ............... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-client ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-server ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-journal ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-native .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-selector .................. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-server .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-service-extensions ........ 1.3.0 -> 1.5.6
+[INFO]   org.apache.commons:commons-dbcp2 ...................... 2.1.1 -> 2.9.0
+[INFO]   org.apache.commons:commons-pool2 ..................... 2.4.2 -> 2.11.1
+[INFO]   org.apache.logging.log4j:log4j-api ................... 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-core .................. 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-slf4j-impl ............ 2.6.2 -> 2.17.1
+[INFO]   org.apache.tomcat:tomcat-jdbc ..................... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat:tomcat-jsp-api .................. 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-core ......... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-el ........... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-jasper ....... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-websocket .... 8.5.5 -> 9.0.0.M27
+[INFO]   org.aspectj:aspectjrt ............................. 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjtools .......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjweaver ......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.assertj:assertj-core .............................. 2.5.0 -> 2.9.1
+[INFO]   org.codehaus.groovy:groovy ....................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-all ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-ant ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-bsf ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-console ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-docgenerator .......... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovydoc ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovysh .............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jmx ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-json .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jsr223 ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-nio ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-servlet ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-sql ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-swing ................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-templates ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-test .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-testng ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-xml ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.eclipse.jetty:apache-jsp ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:apache-jstl ....... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-annotations ...
+[INFO]                                         9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-client ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-continuation ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty:jetty-deploy ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-http ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-io .......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-jmx ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-plus ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-security .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-server ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlet ..... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlets .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-util ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-webapp ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-xml ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty.websocket:javax-websocket-server-impl ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-client ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-server ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.ehcache:ehcache ........................... 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-clustered ................. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-transactions .............. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk17 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk18 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet-core ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.core:jersey-server .......... 2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-bean-validation ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-spring3 ........... 2.23.2 -> 2.26-b03
+[INFO]   org.glassfish.jersey.media:jersey-media-json-jackson ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.hibernate:hibernate-core ............... 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-ehcache ......... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-entitymanager ... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-envers ............. 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-java8 ........... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-jpamodelgen ........ 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-validator ........... 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hibernate:hibernate-validator-annotation-processor ...
+[INFO]                                                 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hsqldb:hsqldb ..................................... 2.3.3 -> 2.6.1
+[INFO]   org.infinispan:infinispan-jcache ............ 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-common .... 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-embedded ...
+[INFO]                                                 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.javassist:javassist ....................... 3.20.0-GA -> 3.28.0-GA
+[INFO]   org.jboss:jboss-transaction-spi ........... 7.3.4.Final -> 7.6.1.Final
+[INFO]   org.jboss.logging:jboss-logging ........... 3.3.0.Final -> 3.4.3.Final
+[INFO]   org.jboss.narayana.jta:jdbc .............. 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jms ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jta ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jts:narayana-jts-integration ...
+[INFO]                                              5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jolokia:jolokia-core .............................. 1.3.4 -> 1.7.1
+[INFO]   org.jooq:jooq ........................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-codegen ................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-meta ................................... 3.8.4 -> 3.16.3
+[INFO]   org.liquibase:liquibase-core .................... 3.5.1 -> 4.0.0-beta2
+[INFO]   org.mariadb.jdbc:mariadb-java-client ............... 1.4.6 -> 2.0.0-RC
+[INFO]   org.mockito:mockito-core ................... 1.10.19 -> 2.0.0-beta.118
+[INFO]   org.mongodb:mongo-java-driver ....................... 3.2.2 -> 3.12.10
+[INFO]   org.mongodb:mongodb-driver .......................... 3.2.2 -> 3.12.10
+[INFO]   org.mortbay.jasper:apache-el ........................ 8.0.33 -> 8.5.70
+[INFO]   org.neo4j:neo4j-ogm-api ........................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-compiler .......................... 2.0.5 -> 2.1.6
+[INFO]   org.neo4j:neo4j-ogm-core .......................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-http-driver ................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.projectlombok:lombok .......................... 1.16.10 -> 1.18.22
+[INFO]   org.seleniumhq.selenium:htmlunit-driver ............... 2.21 -> 2.57.0
+[INFO]   org.seleniumhq.selenium:selenium-api ........... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-firefox-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-ie-driver ..... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-java .......... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-remote-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-safari-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-support ....... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.skyscreamer:jsonassert ............................ 1.3.0 -> 1.5.0
+[INFO]   org.slf4j:jcl-over-slf4j ...................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:jul-to-slf4j ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:log4j-over-slf4j .................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-api ........................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-jdk14 ......................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-log4j12 ....................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-simple ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.spockframework:spock-core .... 1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.spockframework:spock-spring ...
+[INFO]                                      1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.springframework.amqp:spring-amqp ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.amqp:spring-rabbit ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.boot:spring-boot ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator-docs ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-metadata ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-processor ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-devtools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader-tools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-activemq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-amqp ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-aop ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-artemis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-batch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cloud-connectors ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-cassandra ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-couchbase ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-elasticsearch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-gemfire ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-jpa ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-mongodb ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-neo4j ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-redis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-rest ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-solr ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-freemarker ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-groovy-templates ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-hateoas ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-integration ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jdbc ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jersey ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jetty ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jooq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-atomikos ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-bitronix ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-narayana ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-log4j2 ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-logging ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mail ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mobile ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mustache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-remote-shell ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-security ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-facebook ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-linkedin ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-twitter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-thymeleaf ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-tomcat ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-undertow ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-validation ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web-services ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-websocket ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.data:spring-cql ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-cassandra ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-commons ...
+[INFO]                                        1.12.3.RELEASE -> 1.13.22.RELEASE
+[INFO]   org.springframework.data:spring-data-couchbase ...
+[INFO]                                          2.1.3.RELEASE -> 2.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-elasticsearch ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-envers ...
+[INFO]                                          1.0.3.RELEASE -> 1.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-gemfire ...
+[INFO]                                          1.8.3.RELEASE -> 1.9.23.RELEASE
+[INFO]   org.springframework.data:spring-data-jpa ...
+[INFO]                                        1.10.3.RELEASE -> 1.11.22.RELEASE
+[INFO]   org.springframework.data:spring-data-keyvalue ...
+[INFO]                                          1.1.3.RELEASE -> 1.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-cross-store ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-log4j ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-neo4j ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-redis ...
+[INFO]                                          1.7.3.RELEASE -> 1.8.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-core ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-hal-browser ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-webmvc ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-solr ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.hateoas:spring-hateoas ...
+[INFO]                                         0.20.0.RELEASE -> 0.25.2.RELEASE
+[INFO]   org.springframework.integration:spring-integration-java-dsl ...
+[INFO]                                           1.1.3.RELEASE -> 1.2.3.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-core ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-mockmvc ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-restassured ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.retry:spring-retry ........ 1.1.4.RELEASE -> 1.3.1
+[INFO]   org.springframework.security:spring-security-acl ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-aspects ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-cas ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-config ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-core ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-crypto ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-data ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-jwt ...
+[INFO]                                           1.0.5.RELEASE -> 1.1.1.RELEASE
+[INFO]   org.springframework.security:spring-security-ldap ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-messaging ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-openid ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-remoting ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-taglibs ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-test ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-web ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.1.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth2 ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.0.RELEASE
+[INFO]   org.springframework.session:spring-session ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-gemfire ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-mongo ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-redis ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-jdbc ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.ws:spring-ws-core ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-security ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-support ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-test ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.thymeleaf:thymeleaf ................ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf:thymeleaf-spring4 ........ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf.extras:thymeleaf-extras-springsecurity4 ...
+[INFO]                                            2.1.2.RELEASE -> 3.0.0.BETA03
+[INFO]   org.webjars:webjars-locator ............................. 0.32 -> 0.42
+[INFO]   org.yaml:snakeyaml ...................................... 1.17 -> 1.30
+[INFO]   redis.clients:jedis ............................... 2.8.1 -> 3.0.0-rc1
+[INFO] 
+[INFO] The following dependencies in Dependencies have newer versions:
+[INFO]   com.sepaq.commons:commons-orm ............................. 0.1 -> 0.4
+[INFO] 
+[INFO] The following dependencies in Plugin Dependencies have newer versions:
+[INFO]   org.apache.maven.scm:maven-scm-provider-gitexe ..... 1.9.5 -> 2.0.0-M1
+[INFO] 
+[INFO] 
+[INFO] ------------< com.sepaq.connector:activite-connector-model >------------
+[INFO] Building activite-connector-model 4.2.0                            [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.8.1:display-dependency-updates (default-cli) @ activite-connector-model ---
+[INFO] The following dependencies in Dependency Management have newer versions:
+[INFO]   ch.qos.logback:logback-access ................. 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-classic ................ 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-core ................... 1.1.7 -> 1.3.0-alpha12
+[INFO]   com.atomikos:transactions-jdbc ...................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jms ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jta ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.couchbase.client:couchbase-spring-cache ........... 2.0.0 -> 2.1.0
+[INFO]   com.couchbase.client:java-client ..................... 2.2.8 -> 2.7.22
+[INFO]   com.datastax.cassandra:cassandra-driver-core ...... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-dse ....... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-mapping ... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.fasterxml:classmate ............................... 1.3.1 -> 1.5.1
+[INFO]   com.fasterxml.jackson.core:jackson-annotations ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-core .............. 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-databind .......... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-cbor ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-csv ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-smile ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-xml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-yaml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-guava ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate4 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate5 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jaxrs ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jdk8 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-joda ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-json-org ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jsr310 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-base ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-jaxb-annotations ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-kotlin ... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-parameter-names ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.github.ben-manes.caffeine:caffeine ................ 2.3.3 -> 2.9.2
+[INFO]   com.google.code.gson:gson ............................... 2.7 -> 2.8.9
+[INFO]   com.hazelcast:hazelcast .......................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.hazelcast:hazelcast-hibernate4 .................... 3.6.5 -> 3.8.4
+[INFO]   com.hazelcast:hazelcast-spring ................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.jayway.jsonpath:json-path ......................... 2.2.0 -> 2.6.0
+[INFO]   com.jayway.jsonpath:json-path-assert .................. 2.2.0 -> 2.6.0
+[INFO]   com.querydsl:querydsl-apt .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-collections .................. 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-core ......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-jpa .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-mongodb ...................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.samskivert:jmustache ................................ 1.12 -> 1.15
+[INFO]   com.sun.mail:javax.mail ............................... 1.5.6 -> 1.6.2
+[INFO]   com.zaxxer:HikariCP ................................... 2.4.7 -> 2.7.9
+[INFO]   commons-codec:commons-codec ............................. 1.10 -> 1.15
+[INFO]   io.dropwizard.metrics:metrics-core ............. 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-ganglia ................. 3.1.2 -> 3.2.6
+[INFO]   io.dropwizard.metrics:metrics-graphite ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-servlets ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.projectreactor:reactor-core ............ 2.0.8.RELEASE -> 3.0.0.RC1
+[INFO]   io.searchbox:jest ..................................... 2.0.3 -> 2.4.0
+[INFO]   io.undertow:undertow-core ................ 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-servlet ............. 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-websockets-jsr ...... 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   javax.cache:cache-api ................................. 1.0.0 -> 1.1.1
+[INFO]   javax.mail:javax.mail-api ............................. 1.5.6 -> 1.6.2
+[INFO]   javax.servlet:javax.servlet-api ................... 3.1.0 -> 4.0.0-b07
+[INFO]   javax.transaction:javax.transaction-api ................... 1.2 -> 1.3
+[INFO]   jaxen:jaxen ........................................... 1.1.6 -> 1.2.0
+[INFO]   joda-time:joda-time ................................. 2.9.4 -> 2.10.13
+[INFO]   junit:junit ........................................... 4.12 -> 4.13.2
+[INFO]   net.java.dev.jna:jna .................................. 4.2.2 -> 4.5.2
+[INFO]   net.sourceforge.htmlunit:htmlunit ..................... 2.21 -> 2.57.0
+[INFO]   org.apache.activemq:activemq-amqp ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-blueprint .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-broker ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-camel .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-client ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-console ................ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-http ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jaas ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jdbc-store ............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jms-pool ............... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-kahadb-store ........... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-karaf .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-leveldb-store .......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-log4j-appender ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-mqtt ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-generator ..... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-legacy ........ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-osgi ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-partition .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-pool ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-ra ..................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-run .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-runtime-config ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-shiro .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-spring ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-stomp .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-web .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:artemis-amqp-protocol ............. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-commons ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-core-client ............... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-client ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-server ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-journal ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-native .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-selector .................. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-server .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-service-extensions ........ 1.3.0 -> 1.5.6
+[INFO]   org.apache.commons:commons-dbcp2 ...................... 2.1.1 -> 2.9.0
+[INFO]   org.apache.commons:commons-pool2 ..................... 2.4.2 -> 2.11.1
+[INFO]   org.apache.logging.log4j:log4j-api ................... 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-core .................. 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-slf4j-impl ............ 2.6.2 -> 2.17.1
+[INFO]   org.apache.tomcat:tomcat-jdbc ..................... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat:tomcat-jsp-api .................. 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-core ......... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-el ........... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-jasper ....... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-websocket .... 8.5.5 -> 9.0.0.M27
+[INFO]   org.aspectj:aspectjrt ............................. 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjtools .......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjweaver ......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.assertj:assertj-core .............................. 2.5.0 -> 2.9.1
+[INFO]   org.codehaus.groovy:groovy ....................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-all ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-ant ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-bsf ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-console ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-docgenerator .......... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovydoc ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovysh .............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jmx ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-json .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jsr223 ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-nio ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-servlet ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-sql ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-swing ................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-templates ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-test .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-testng ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-xml ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.eclipse.jetty:apache-jsp ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:apache-jstl ....... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-annotations ...
+[INFO]                                         9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-client ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-continuation ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty:jetty-deploy ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-http ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-io .......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-jmx ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-plus ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-security .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-server ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlet ..... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlets .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-util ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-webapp ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-xml ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty.websocket:javax-websocket-server-impl ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-client ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-server ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.ehcache:ehcache ........................... 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-clustered ................. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-transactions .............. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk17 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk18 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet-core ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.core:jersey-server .......... 2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-bean-validation ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-spring3 ........... 2.23.2 -> 2.26-b03
+[INFO]   org.glassfish.jersey.media:jersey-media-json-jackson ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.hibernate:hibernate-core ............... 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-ehcache ......... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-entitymanager ... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-envers ............. 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-java8 ........... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-jpamodelgen ........ 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-validator ........... 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hibernate:hibernate-validator-annotation-processor ...
+[INFO]                                                 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hsqldb:hsqldb ..................................... 2.3.3 -> 2.6.1
+[INFO]   org.infinispan:infinispan-jcache ............ 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-common .... 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-embedded ...
+[INFO]                                                 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.javassist:javassist ....................... 3.20.0-GA -> 3.28.0-GA
+[INFO]   org.jboss:jboss-transaction-spi ........... 7.3.4.Final -> 7.6.1.Final
+[INFO]   org.jboss.logging:jboss-logging ........... 3.3.0.Final -> 3.4.3.Final
+[INFO]   org.jboss.narayana.jta:jdbc .............. 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jms ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jta ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jts:narayana-jts-integration ...
+[INFO]                                              5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jolokia:jolokia-core .............................. 1.3.4 -> 1.7.1
+[INFO]   org.jooq:jooq ........................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-codegen ................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-meta ................................... 3.8.4 -> 3.16.3
+[INFO]   org.liquibase:liquibase-core .................... 3.5.1 -> 4.0.0-beta2
+[INFO]   org.mariadb.jdbc:mariadb-java-client ............... 1.4.6 -> 2.0.0-RC
+[INFO]   org.mockito:mockito-core ................... 1.10.19 -> 2.0.0-beta.118
+[INFO]   org.mongodb:mongo-java-driver ....................... 3.2.2 -> 3.12.10
+[INFO]   org.mongodb:mongodb-driver .......................... 3.2.2 -> 3.12.10
+[INFO]   org.mortbay.jasper:apache-el ........................ 8.0.33 -> 8.5.70
+[INFO]   org.neo4j:neo4j-ogm-api ........................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-compiler .......................... 2.0.5 -> 2.1.6
+[INFO]   org.neo4j:neo4j-ogm-core .......................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-http-driver ................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.projectlombok:lombok .......................... 1.16.10 -> 1.18.22
+[INFO]   org.seleniumhq.selenium:htmlunit-driver ............... 2.21 -> 2.57.0
+[INFO]   org.seleniumhq.selenium:selenium-api ........... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-firefox-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-ie-driver ..... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-java .......... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-remote-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-safari-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-support ....... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.skyscreamer:jsonassert ............................ 1.3.0 -> 1.5.0
+[INFO]   org.slf4j:jcl-over-slf4j ...................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:jul-to-slf4j ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:log4j-over-slf4j .................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-api ........................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-jdk14 ......................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-log4j12 ....................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-simple ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.spockframework:spock-core .... 1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.spockframework:spock-spring ...
+[INFO]                                      1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.springframework.amqp:spring-amqp ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.amqp:spring-rabbit ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.boot:spring-boot ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator-docs ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-metadata ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-processor ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-devtools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader-tools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-activemq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-amqp ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-aop ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-artemis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-batch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cloud-connectors ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-cassandra ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-couchbase ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-elasticsearch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-gemfire ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-jpa ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-mongodb ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-neo4j ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-redis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-rest ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-solr ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-freemarker ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-groovy-templates ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-hateoas ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-integration ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jdbc ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jersey ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jetty ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jooq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-atomikos ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-bitronix ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-narayana ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-log4j2 ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-logging ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mail ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mobile ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mustache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-remote-shell ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-security ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-facebook ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-linkedin ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-twitter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-thymeleaf ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-tomcat ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-undertow ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-validation ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web-services ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-websocket ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.data:spring-cql ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-cassandra ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-commons ...
+[INFO]                                        1.12.3.RELEASE -> 1.13.22.RELEASE
+[INFO]   org.springframework.data:spring-data-couchbase ...
+[INFO]                                          2.1.3.RELEASE -> 2.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-elasticsearch ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-envers ...
+[INFO]                                          1.0.3.RELEASE -> 1.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-gemfire ...
+[INFO]                                          1.8.3.RELEASE -> 1.9.23.RELEASE
+[INFO]   org.springframework.data:spring-data-jpa ...
+[INFO]                                        1.10.3.RELEASE -> 1.11.22.RELEASE
+[INFO]   org.springframework.data:spring-data-keyvalue ...
+[INFO]                                          1.1.3.RELEASE -> 1.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-cross-store ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-log4j ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-neo4j ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-redis ...
+[INFO]                                          1.7.3.RELEASE -> 1.8.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-core ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-hal-browser ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-webmvc ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-solr ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.hateoas:spring-hateoas ...
+[INFO]                                         0.20.0.RELEASE -> 0.25.2.RELEASE
+[INFO]   org.springframework.integration:spring-integration-java-dsl ...
+[INFO]                                           1.1.3.RELEASE -> 1.2.3.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-core ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-mockmvc ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-restassured ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.retry:spring-retry ........ 1.1.4.RELEASE -> 1.3.1
+[INFO]   org.springframework.security:spring-security-acl ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-aspects ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-cas ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-config ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-core ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-crypto ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-data ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-jwt ...
+[INFO]                                           1.0.5.RELEASE -> 1.1.1.RELEASE
+[INFO]   org.springframework.security:spring-security-ldap ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-messaging ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-openid ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-remoting ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-taglibs ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-test ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-web ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.1.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth2 ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.0.RELEASE
+[INFO]   org.springframework.session:spring-session ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-gemfire ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-mongo ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-redis ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-jdbc ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.ws:spring-ws-core ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-security ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-support ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-test ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.thymeleaf:thymeleaf ................ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf:thymeleaf-spring4 ........ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf.extras:thymeleaf-extras-springsecurity4 ...
+[INFO]                                            2.1.2.RELEASE -> 3.0.0.BETA03
+[INFO]   org.webjars:webjars-locator ............................. 0.32 -> 0.42
+[INFO]   org.yaml:snakeyaml ...................................... 1.17 -> 1.30
+[INFO]   redis.clients:jedis ............................... 2.8.1 -> 3.0.0-rc1
+[INFO] 
+[INFO] The following dependencies in Dependencies have newer versions:
+[INFO]   com.google.guava:guava ...................... 21.0 -> 22.0-rc1-android
+[INFO]   com.sepaq.commons:commons-orm ............................. 0.1 -> 0.4
+[INFO]   io.springfox:springfox-swagger2 ...................... 2.5.0 -> 2.10.5
+[INFO] 
+[INFO] The following dependencies in Plugin Dependencies have newer versions:
+[INFO]   org.apache.maven.scm:maven-scm-provider-gitexe ..... 1.9.5 -> 2.0.0-M1
+[INFO] 
+[INFO] 
+[INFO] ------------< com.sepaq.connector:activite-connector-core >-------------
+[INFO] Building activite-connector-core 4.2.0                             [3/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.8.1:display-dependency-updates (default-cli) @ activite-connector-core ---
+[INFO] The following dependencies in Dependency Management have newer versions:
+[INFO]   ch.qos.logback:logback-access ................. 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-classic ................ 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-core ................... 1.1.7 -> 1.3.0-alpha12
+[INFO]   com.atomikos:transactions-jdbc ...................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jms ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jta ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.couchbase.client:couchbase-spring-cache ........... 2.0.0 -> 2.1.0
+[INFO]   com.couchbase.client:java-client ..................... 2.2.8 -> 2.7.22
+[INFO]   com.datastax.cassandra:cassandra-driver-core ...... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-dse ....... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-mapping ... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.fasterxml:classmate ............................... 1.3.1 -> 1.5.1
+[INFO]   com.fasterxml.jackson.core:jackson-annotations ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-core .............. 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-databind .......... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-cbor ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-csv ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-smile ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-xml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-yaml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-guava ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate4 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate5 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jaxrs ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jdk8 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-joda ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-json-org ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jsr310 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-base ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-jaxb-annotations ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-kotlin ... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-parameter-names ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.github.ben-manes.caffeine:caffeine ................ 2.3.3 -> 2.9.2
+[INFO]   com.google.code.gson:gson ............................... 2.7 -> 2.8.9
+[INFO]   com.hazelcast:hazelcast .......................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.hazelcast:hazelcast-hibernate4 .................... 3.6.5 -> 3.8.4
+[INFO]   com.hazelcast:hazelcast-spring ................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.jayway.jsonpath:json-path ......................... 2.2.0 -> 2.6.0
+[INFO]   com.jayway.jsonpath:json-path-assert .................. 2.2.0 -> 2.6.0
+[INFO]   com.querydsl:querydsl-apt .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-collections .................. 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-core ......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-jpa .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-mongodb ...................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.samskivert:jmustache ................................ 1.12 -> 1.15
+[INFO]   com.sun.mail:javax.mail ............................... 1.5.6 -> 1.6.2
+[INFO]   com.zaxxer:HikariCP ................................... 2.4.7 -> 2.7.9
+[INFO]   commons-codec:commons-codec ............................. 1.10 -> 1.15
+[INFO]   io.dropwizard.metrics:metrics-core ............. 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-ganglia ................. 3.1.2 -> 3.2.6
+[INFO]   io.dropwizard.metrics:metrics-graphite ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-servlets ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.projectreactor:reactor-core ............ 2.0.8.RELEASE -> 3.0.0.RC1
+[INFO]   io.searchbox:jest ..................................... 2.0.3 -> 2.4.0
+[INFO]   io.undertow:undertow-core ................ 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-servlet ............. 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-websockets-jsr ...... 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   javax.cache:cache-api ................................. 1.0.0 -> 1.1.1
+[INFO]   javax.mail:javax.mail-api ............................. 1.5.6 -> 1.6.2
+[INFO]   javax.servlet:javax.servlet-api ................... 3.1.0 -> 4.0.0-b07
+[INFO]   javax.transaction:javax.transaction-api ................... 1.2 -> 1.3
+[INFO]   jaxen:jaxen ........................................... 1.1.6 -> 1.2.0
+[INFO]   joda-time:joda-time ................................. 2.9.4 -> 2.10.13
+[INFO]   junit:junit ........................................... 4.12 -> 4.13.2
+[INFO]   net.java.dev.jna:jna .................................. 4.2.2 -> 4.5.2
+[INFO]   net.sourceforge.htmlunit:htmlunit ..................... 2.21 -> 2.57.0
+[INFO]   org.apache.activemq:activemq-amqp ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-blueprint .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-broker ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-camel .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-client ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-console ................ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-http ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jaas ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jdbc-store ............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jms-pool ............... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-kahadb-store ........... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-karaf .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-leveldb-store .......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-log4j-appender ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-mqtt ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-generator ..... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-legacy ........ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-osgi ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-partition .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-pool ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-ra ..................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-run .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-runtime-config ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-shiro .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-spring ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-stomp .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-web .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:artemis-amqp-protocol ............. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-commons ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-core-client ............... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-client ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-server ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-journal ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-native .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-selector .................. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-server .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-service-extensions ........ 1.3.0 -> 1.5.6
+[INFO]   org.apache.commons:commons-dbcp2 ...................... 2.1.1 -> 2.9.0
+[INFO]   org.apache.commons:commons-pool2 ..................... 2.4.2 -> 2.11.1
+[INFO]   org.apache.logging.log4j:log4j-api ................... 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-core .................. 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-slf4j-impl ............ 2.6.2 -> 2.17.1
+[INFO]   org.apache.tomcat:tomcat-jdbc ..................... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat:tomcat-jsp-api .................. 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-core ......... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-el ........... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-jasper ....... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-websocket .... 8.5.5 -> 9.0.0.M27
+[INFO]   org.aspectj:aspectjrt ............................. 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjtools .......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjweaver ......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.assertj:assertj-core .............................. 2.5.0 -> 2.9.1
+[INFO]   org.codehaus.groovy:groovy ....................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-all ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-ant ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-bsf ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-console ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-docgenerator .......... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovydoc ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovysh .............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jmx ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-json .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jsr223 ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-nio ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-servlet ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-sql ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-swing ................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-templates ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-test .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-testng ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-xml ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.eclipse.jetty:apache-jsp ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:apache-jstl ....... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-annotations ...
+[INFO]                                         9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-client ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-continuation ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty:jetty-deploy ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-http ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-io .......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-jmx ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-plus ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-security .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-server ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlet ..... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlets .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-util ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-webapp ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-xml ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty.websocket:javax-websocket-server-impl ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-client ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-server ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.ehcache:ehcache ........................... 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-clustered ................. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-transactions .............. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk17 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk18 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet-core ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.core:jersey-server .......... 2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-bean-validation ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-spring3 ........... 2.23.2 -> 2.26-b03
+[INFO]   org.glassfish.jersey.media:jersey-media-json-jackson ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.hibernate:hibernate-core ............... 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-ehcache ......... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-entitymanager ... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-envers ............. 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-java8 ........... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-jpamodelgen ........ 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-validator ........... 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hibernate:hibernate-validator-annotation-processor ...
+[INFO]                                                 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hsqldb:hsqldb ..................................... 2.3.3 -> 2.6.1
+[INFO]   org.infinispan:infinispan-jcache ............ 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-common .... 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-embedded ...
+[INFO]                                                 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.javassist:javassist ....................... 3.20.0-GA -> 3.28.0-GA
+[INFO]   org.jboss:jboss-transaction-spi ........... 7.3.4.Final -> 7.6.1.Final
+[INFO]   org.jboss.logging:jboss-logging ........... 3.3.0.Final -> 3.4.3.Final
+[INFO]   org.jboss.narayana.jta:jdbc .............. 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jms ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jta ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jts:narayana-jts-integration ...
+[INFO]                                              5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jolokia:jolokia-core .............................. 1.3.4 -> 1.7.1
+[INFO]   org.jooq:jooq ........................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-codegen ................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-meta ................................... 3.8.4 -> 3.16.3
+[INFO]   org.liquibase:liquibase-core .................... 3.5.1 -> 4.0.0-beta2
+[INFO]   org.mariadb.jdbc:mariadb-java-client ............... 1.4.6 -> 2.0.0-RC
+[INFO]   org.mockito:mockito-core ................... 1.10.19 -> 2.0.0-beta.118
+[INFO]   org.mongodb:mongo-java-driver ....................... 3.2.2 -> 3.12.10
+[INFO]   org.mongodb:mongodb-driver .......................... 3.2.2 -> 3.12.10
+[INFO]   org.mortbay.jasper:apache-el ........................ 8.0.33 -> 8.5.70
+[INFO]   org.neo4j:neo4j-ogm-api ........................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-compiler .......................... 2.0.5 -> 2.1.6
+[INFO]   org.neo4j:neo4j-ogm-core .......................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-http-driver ................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.projectlombok:lombok .......................... 1.16.10 -> 1.18.22
+[INFO]   org.seleniumhq.selenium:htmlunit-driver ............... 2.21 -> 2.57.0
+[INFO]   org.seleniumhq.selenium:selenium-api ........... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-firefox-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-ie-driver ..... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-java .......... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-remote-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-safari-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-support ....... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.skyscreamer:jsonassert ............................ 1.3.0 -> 1.5.0
+[INFO]   org.slf4j:jcl-over-slf4j ...................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:jul-to-slf4j ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:log4j-over-slf4j .................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-api ........................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-jdk14 ......................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-log4j12 ....................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-simple ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.spockframework:spock-core .... 1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.spockframework:spock-spring ...
+[INFO]                                      1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.springframework.amqp:spring-amqp ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.amqp:spring-rabbit ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.boot:spring-boot ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator-docs ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-metadata ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-processor ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-devtools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader-tools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-activemq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-amqp ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-aop ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-artemis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-batch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cloud-connectors ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-cassandra ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-couchbase ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-elasticsearch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-gemfire ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-jpa ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-mongodb ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-neo4j ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-redis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-rest ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-solr ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-freemarker ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-groovy-templates ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-hateoas ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-integration ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jdbc ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jersey ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jetty ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jooq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-atomikos ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-bitronix ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-narayana ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-log4j2 ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-logging ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mail ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mobile ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mustache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-remote-shell ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-security ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-facebook ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-linkedin ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-twitter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-thymeleaf ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-tomcat ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-undertow ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-validation ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web-services ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-websocket ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.data:spring-cql ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-cassandra ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-commons ...
+[INFO]                                        1.12.3.RELEASE -> 1.13.22.RELEASE
+[INFO]   org.springframework.data:spring-data-couchbase ...
+[INFO]                                          2.1.3.RELEASE -> 2.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-elasticsearch ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-envers ...
+[INFO]                                          1.0.3.RELEASE -> 1.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-gemfire ...
+[INFO]                                          1.8.3.RELEASE -> 1.9.23.RELEASE
+[INFO]   org.springframework.data:spring-data-jpa ...
+[INFO]                                        1.10.3.RELEASE -> 1.11.22.RELEASE
+[INFO]   org.springframework.data:spring-data-keyvalue ...
+[INFO]                                          1.1.3.RELEASE -> 1.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-cross-store ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-log4j ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-neo4j ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-redis ...
+[INFO]                                          1.7.3.RELEASE -> 1.8.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-core ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-hal-browser ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-webmvc ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-solr ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.hateoas:spring-hateoas ...
+[INFO]                                         0.20.0.RELEASE -> 0.25.2.RELEASE
+[INFO]   org.springframework.integration:spring-integration-java-dsl ...
+[INFO]                                           1.1.3.RELEASE -> 1.2.3.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-core ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-mockmvc ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-restassured ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.retry:spring-retry ........ 1.1.4.RELEASE -> 1.3.1
+[INFO]   org.springframework.security:spring-security-acl ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-aspects ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-cas ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-config ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-core ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-crypto ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-data ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-jwt ...
+[INFO]                                           1.0.5.RELEASE -> 1.1.1.RELEASE
+[INFO]   org.springframework.security:spring-security-ldap ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-messaging ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-openid ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-remoting ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-taglibs ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-test ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-web ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.1.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth2 ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.0.RELEASE
+[INFO]   org.springframework.session:spring-session ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-gemfire ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-mongo ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-redis ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-jdbc ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.ws:spring-ws-core ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-security ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-support ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-test ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.thymeleaf:thymeleaf ................ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf:thymeleaf-spring4 ........ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf.extras:thymeleaf-extras-springsecurity4 ...
+[INFO]                                            2.1.2.RELEASE -> 3.0.0.BETA03
+[INFO]   org.webjars:webjars-locator ............................. 0.32 -> 0.42
+[INFO]   org.yaml:snakeyaml ...................................... 1.17 -> 1.30
+[INFO]   redis.clients:jedis ............................... 2.8.1 -> 3.0.0-rc1
+[INFO] 
+[INFO] The following dependencies in Dependencies have newer versions:
+[INFO]   com.google.guava:guava ...................... 21.0 -> 22.0-rc1-android
+[INFO]   com.sepaq.commons:commons-orm ............................. 0.1 -> 0.4
+[INFO] 
+[INFO] The following dependencies in Plugin Dependencies have newer versions:
+[INFO]   org.apache.maven.scm:maven-scm-provider-gitexe ..... 1.9.5 -> 2.0.0-M1
+[INFO] 
+[INFO] 
+[INFO] ------------< com.sepaq.connector:activite-connector-rest >-------------
+[INFO] Building activite-connector-rest 4.2.0                             [4/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.8.1:display-dependency-updates (default-cli) @ activite-connector-rest ---
+[INFO] The following dependencies in Dependency Management have newer versions:
+[INFO]   ch.qos.logback:logback-access ................. 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-classic ................ 1.1.7 -> 1.3.0-alpha12
+[INFO]   ch.qos.logback:logback-core ................... 1.1.7 -> 1.3.0-alpha12
+[INFO]   com.atomikos:transactions-jdbc ...................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jms ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.atomikos:transactions-jta ....................... 3.9.3 -> 4.0.0M5
+[INFO]   com.couchbase.client:couchbase-spring-cache ........... 2.0.0 -> 2.1.0
+[INFO]   com.couchbase.client:java-client ..................... 2.2.8 -> 2.7.22
+[INFO]   com.datastax.cassandra:cassandra-driver-core ...... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-dse ....... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.datastax.cassandra:cassandra-driver-mapping ... 2.1.9 -> 3.0.0-rc1
+[INFO]   com.fasterxml:classmate ............................... 1.3.1 -> 1.5.1
+[INFO]   com.fasterxml.jackson.core:jackson-annotations ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-core .............. 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.core:jackson-databind .......... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-cbor ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-csv ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-smile ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-xml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.dataformat:jackson-dataformat-yaml ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-guava ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate4 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-hibernate5 ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jaxrs ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jdk8 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-joda ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-json-org ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.datatype:jackson-datatype-jsr310 ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-base ....... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-jaxb-annotations ...
+[INFO]                                                          2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-kotlin ... 2.8.3 -> 2.13.1
+[INFO]   com.fasterxml.jackson.module:jackson-module-parameter-names ...
+[INFO]                                                          2.8.3 -> 2.13.0
+[INFO]   com.github.ben-manes.caffeine:caffeine ................ 2.3.3 -> 2.9.2
+[INFO]   com.google.code.gson:gson ............................... 2.7 -> 2.8.9
+[INFO]   com.hazelcast:hazelcast .......................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.hazelcast:hazelcast-hibernate4 .................... 3.6.5 -> 3.8.4
+[INFO]   com.hazelcast:hazelcast-spring ................... 3.6.5 -> 4.0-BETA-2
+[INFO]   com.jayway.jsonpath:json-path ......................... 2.2.0 -> 2.6.0
+[INFO]   com.jayway.jsonpath:json-path-assert .................. 2.2.0 -> 2.6.0
+[INFO]   com.querydsl:querydsl-apt .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-collections .................. 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-core ......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-jpa .......................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.querydsl:querydsl-mongodb ...................... 4.1.4 -> 5.0.0.M1
+[INFO]   com.samskivert:jmustache ................................ 1.12 -> 1.15
+[INFO]   com.sun.mail:javax.mail ............................... 1.5.6 -> 1.6.2
+[INFO]   com.zaxxer:HikariCP ................................... 2.4.7 -> 2.7.9
+[INFO]   commons-codec:commons-codec ............................. 1.10 -> 1.15
+[INFO]   io.dropwizard.metrics:metrics-core ............. 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-ganglia ................. 3.1.2 -> 3.2.6
+[INFO]   io.dropwizard.metrics:metrics-graphite ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.dropwizard.metrics:metrics-servlets ......... 3.1.2 -> 4.0.0-alpha5
+[INFO]   io.projectreactor:reactor-core ............ 2.0.8.RELEASE -> 3.0.0.RC1
+[INFO]   io.searchbox:jest ..................................... 2.0.3 -> 2.4.0
+[INFO]   io.undertow:undertow-core ................ 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-servlet ............. 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   io.undertow:undertow-websockets-jsr ...... 1.3.25.Final -> 2.0.0.Beta1
+[INFO]   javax.cache:cache-api ................................. 1.0.0 -> 1.1.1
+[INFO]   javax.mail:javax.mail-api ............................. 1.5.6 -> 1.6.2
+[INFO]   javax.servlet:javax.servlet-api ................... 3.1.0 -> 4.0.0-b07
+[INFO]   javax.transaction:javax.transaction-api ................... 1.2 -> 1.3
+[INFO]   jaxen:jaxen ........................................... 1.1.6 -> 1.2.0
+[INFO]   joda-time:joda-time ................................. 2.9.4 -> 2.10.13
+[INFO]   junit:junit ........................................... 4.12 -> 4.13.2
+[INFO]   net.java.dev.jna:jna .................................. 4.2.2 -> 4.5.2
+[INFO]   net.sourceforge.htmlunit:htmlunit ..................... 2.21 -> 2.57.0
+[INFO]   org.apache.activemq:activemq-amqp ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-blueprint .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-broker ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-camel .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-client ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-console ................ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-http ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jaas ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jdbc-store ............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-jms-pool ............... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-kahadb-store ........... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-karaf .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-leveldb-store .......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-log4j-appender ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-mqtt ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-generator ..... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-openwire-legacy ........ 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-osgi ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-partition .............. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-pool ................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-ra ..................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-run .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-runtime-config ......... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-shiro .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-spring ................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-stomp .................. 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:activemq-web .................... 5.13.4 -> 5.16.3
+[INFO]   org.apache.activemq:artemis-amqp-protocol ............. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-commons ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-core-client ............... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-client ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-jms-server ................ 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-journal ................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-native .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-selector .................. 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-server .................... 1.3.0 -> 1.5.6
+[INFO]   org.apache.activemq:artemis-service-extensions ........ 1.3.0 -> 1.5.6
+[INFO]   org.apache.commons:commons-dbcp2 ...................... 2.1.1 -> 2.9.0
+[INFO]   org.apache.commons:commons-pool2 ..................... 2.4.2 -> 2.11.1
+[INFO]   org.apache.logging.log4j:log4j-api ................... 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-core .................. 2.6.2 -> 2.17.1
+[INFO]   org.apache.logging.log4j:log4j-slf4j-impl ............ 2.6.2 -> 2.17.1
+[INFO]   org.apache.tomcat:tomcat-jdbc ..................... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat:tomcat-jsp-api .................. 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-core ......... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-el ........... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-jasper ....... 8.5.5 -> 9.0.0.M27
+[INFO]   org.apache.tomcat.embed:tomcat-embed-websocket .... 8.5.5 -> 9.0.0.M27
+[INFO]   org.aspectj:aspectjrt ............................. 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjtools .......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.aspectj:aspectjweaver ......................... 1.8.9 -> 1.9.8.RC3
+[INFO]   org.assertj:assertj-core .............................. 2.5.0 -> 2.9.1
+[INFO]   org.codehaus.groovy:groovy ....................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-all ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-ant ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-bsf ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-console ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-docgenerator .......... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovydoc ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-groovysh .............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jmx ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-json .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-jsr223 ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-nio ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-servlet ............... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-sql ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-swing ................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-templates ............. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-test .................. 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-testng ................ 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.codehaus.groovy:groovy-xml ................... 2.4.7 -> 3.0.0-rc-3
+[INFO]   org.eclipse.jetty:apache-jsp ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:apache-jstl ....... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-annotations ...
+[INFO]                                         9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-client ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-continuation ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty:jetty-deploy ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-http ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-io .......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-jmx ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-plus ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-security .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-server ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlet ..... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-servlets .... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-util ........ 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-webapp ...... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty:jetty-xml ......... 9.3.11.v20160721 -> 10.0.0.beta3
+[INFO]   org.eclipse.jetty.websocket:javax-websocket-server-impl ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-client ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.eclipse.jetty.websocket:websocket-server ...
+[INFO]                                     9.3.11.v20160721 -> 9.4.44.v20210927
+[INFO]   org.ehcache:ehcache ........................... 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-clustered ................. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.ehcache:ehcache-transactions .............. 3.1.2 -> 3.10.0-alpha0
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk17 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.firebirdsql.jdbc:jaybird-jdk18 ............ 2.2.11 -> 3.0.0-beta-3
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.containers:jersey-container-servlet-core ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.core:jersey-server .......... 2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-bean-validation ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.glassfish.jersey.ext:jersey-spring3 ........... 2.23.2 -> 2.26-b03
+[INFO]   org.glassfish.jersey.media:jersey-media-json-jackson ...
+[INFO]                                                      2.23.2 -> 3.0.0-RC2
+[INFO]   org.hibernate:hibernate-core ............... 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-ehcache ......... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-entitymanager ... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-envers ............. 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-java8 ........... 5.0.11.Final -> 6.0.0.Alpha7
+[INFO]   org.hibernate:hibernate-jpamodelgen ........ 5.0.11.Final -> 6.0.0.CR1
+[INFO]   org.hibernate:hibernate-validator ........... 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hibernate:hibernate-validator-annotation-processor ...
+[INFO]                                                 5.2.4.Final -> 6.0.0.CR3
+[INFO]   org.hsqldb:hsqldb ..................................... 2.3.3 -> 2.6.1
+[INFO]   org.infinispan:infinispan-jcache ............ 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-common .... 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.infinispan:infinispan-spring4-embedded ...
+[INFO]                                                 8.2.4.Final -> 9.0.0.CR4
+[INFO]   org.javassist:javassist ....................... 3.20.0-GA -> 3.28.0-GA
+[INFO]   org.jboss:jboss-transaction-spi ........... 7.3.4.Final -> 7.6.1.Final
+[INFO]   org.jboss.logging:jboss-logging ........... 3.3.0.Final -> 3.4.3.Final
+[INFO]   org.jboss.narayana.jta:jdbc .............. 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jms ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jta:jta ............... 5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jboss.narayana.jts:narayana-jts-integration ...
+[INFO]                                              5.3.4.Final -> 5.12.5.Final
+[INFO]   org.jolokia:jolokia-core .............................. 1.3.4 -> 1.7.1
+[INFO]   org.jooq:jooq ........................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-codegen ................................ 3.8.4 -> 3.16.3
+[INFO]   org.jooq:jooq-meta ................................... 3.8.4 -> 3.16.3
+[INFO]   org.liquibase:liquibase-core .................... 3.5.1 -> 4.0.0-beta2
+[INFO]   org.mariadb.jdbc:mariadb-java-client ............... 1.4.6 -> 2.0.0-RC
+[INFO]   org.mockito:mockito-core ................... 1.10.19 -> 2.0.0-beta.118
+[INFO]   org.mongodb:mongo-java-driver ....................... 3.2.2 -> 3.12.10
+[INFO]   org.mongodb:mongodb-driver .......................... 3.2.2 -> 3.12.10
+[INFO]   org.mortbay.jasper:apache-el ........................ 8.0.33 -> 8.5.70
+[INFO]   org.neo4j:neo4j-ogm-api ........................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-compiler .......................... 2.0.5 -> 2.1.6
+[INFO]   org.neo4j:neo4j-ogm-core .......................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.neo4j:neo4j-ogm-http-driver ................... 2.0.5 -> 3.0.0-RC1
+[INFO]   org.projectlombok:lombok .......................... 1.16.10 -> 1.18.22
+[INFO]   org.seleniumhq.selenium:htmlunit-driver ............... 2.21 -> 2.57.0
+[INFO]   org.seleniumhq.selenium:selenium-api ........... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-firefox-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-ie-driver ..... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-java .......... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-remote-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-safari-driver ...
+[INFO]                                                    2.53.1 -> 3.0.0-beta4
+[INFO]   org.seleniumhq.selenium:selenium-support ....... 2.53.1 -> 3.0.0-beta4
+[INFO]   org.skyscreamer:jsonassert ............................ 1.3.0 -> 1.5.0
+[INFO]   org.slf4j:jcl-over-slf4j ...................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:jul-to-slf4j ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:log4j-over-slf4j .................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-api ........................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-jdk14 ......................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-log4j12 ....................... 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.slf4j:slf4j-simple ........................ 1.7.21 -> 2.0.0-alpha6
+[INFO]   org.spockframework:spock-core .... 1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.spockframework:spock-spring ...
+[INFO]                                      1.0-groovy-2.4 -> 2.0-M5-groovy-3.0
+[INFO]   org.springframework.amqp:spring-amqp ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.amqp:spring-rabbit ...
+[INFO]                                          1.6.2.RELEASE -> 1.7.15.RELEASE
+[INFO]   org.springframework.boot:spring-boot ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-actuator-docs ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-metadata ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-configuration-processor ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-devtools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-loader-tools ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-activemq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-actuator ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-amqp ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-aop ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-artemis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-batch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-cloud-connectors ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-cassandra ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-couchbase ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-elasticsearch ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-gemfire ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-jpa ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-mongodb ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-neo4j ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-redis ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-rest ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-data-solr ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-freemarker ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-groovy-templates ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-hateoas ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-integration ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jdbc ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jersey ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jetty ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jooq ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-atomikos ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-bitronix ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-jta-narayana ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-log4j2 ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-logging ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mail ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mobile ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-mustache ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-remote-shell ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-security ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-facebook ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-linkedin ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-social-twitter ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-thymeleaf ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-tomcat ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-undertow ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-validation ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-web-services ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-starter-websocket ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.boot:spring-boot-test-autoconfigure ...
+[INFO]                                          1.4.1.RELEASE -> 1.5.22.RELEASE
+[INFO]   org.springframework.data:spring-cql ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-cassandra ...
+[INFO]                                          1.4.3.RELEASE -> 1.5.23.RELEASE
+[INFO]   org.springframework.data:spring-data-commons ...
+[INFO]                                        1.12.3.RELEASE -> 1.13.22.RELEASE
+[INFO]   org.springframework.data:spring-data-couchbase ...
+[INFO]                                          2.1.3.RELEASE -> 2.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-elasticsearch ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-envers ...
+[INFO]                                          1.0.3.RELEASE -> 1.1.23.RELEASE
+[INFO]   org.springframework.data:spring-data-gemfire ...
+[INFO]                                          1.8.3.RELEASE -> 1.9.23.RELEASE
+[INFO]   org.springframework.data:spring-data-jpa ...
+[INFO]                                        1.10.3.RELEASE -> 1.11.22.RELEASE
+[INFO]   org.springframework.data:spring-data-keyvalue ...
+[INFO]                                          1.1.3.RELEASE -> 1.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-cross-store ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-mongodb-log4j ...
+[INFO]                                         1.9.3.RELEASE -> 1.10.23.RELEASE
+[INFO]   org.springframework.data:spring-data-neo4j ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.23.RELEASE
+[INFO]   org.springframework.data:spring-data-redis ...
+[INFO]                                          1.7.3.RELEASE -> 1.8.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-core ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-hal-browser ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-rest-webmvc ...
+[INFO]                                          2.5.3.RELEASE -> 2.6.23.RELEASE
+[INFO]   org.springframework.data:spring-data-solr ...
+[INFO]                                          2.0.3.RELEASE -> 2.1.23.RELEASE
+[INFO]   org.springframework.hateoas:spring-hateoas ...
+[INFO]                                         0.20.0.RELEASE -> 0.25.2.RELEASE
+[INFO]   org.springframework.integration:spring-integration-java-dsl ...
+[INFO]                                           1.1.3.RELEASE -> 1.2.3.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-core ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-mockmvc ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.restdocs:spring-restdocs-restassured ...
+[INFO]                                           1.1.2.RELEASE -> 1.2.6.RELEASE
+[INFO]   org.springframework.retry:spring-retry ........ 1.1.4.RELEASE -> 1.3.1
+[INFO]   org.springframework.security:spring-security-acl ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-aspects ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-cas ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-config ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-core ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security:spring-security-crypto ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-data ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-jwt ...
+[INFO]                                           1.0.5.RELEASE -> 1.1.1.RELEASE
+[INFO]   org.springframework.security:spring-security-ldap ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-messaging ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-openid ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-remoting ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-taglibs ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-test ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.20.RELEASE
+[INFO]   org.springframework.security:spring-security-web ...
+[INFO]                                          4.1.3.RELEASE -> 4.2.19.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.1.RELEASE
+[INFO]   org.springframework.security.oauth:spring-security-oauth2 ...
+[INFO]                                          2.0.11.RELEASE -> 2.5.0.RELEASE
+[INFO]   org.springframework.session:spring-session ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-gemfire ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-mongo ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-data-redis ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.session:spring-session-jdbc ...
+[INFO]                                           1.2.2.RELEASE -> 1.3.5.RELEASE
+[INFO]   org.springframework.ws:spring-ws-core ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-security ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-support ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.springframework.ws:spring-ws-test ...
+[INFO]                                           2.3.0.RELEASE -> 2.4.7.RELEASE
+[INFO]   org.thymeleaf:thymeleaf ................ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf:thymeleaf-spring4 ........ 2.1.5.RELEASE -> 3.0.0.BETA03
+[INFO]   org.thymeleaf.extras:thymeleaf-extras-springsecurity4 ...
+[INFO]                                            2.1.2.RELEASE -> 3.0.0.BETA03
+[INFO]   org.webjars:webjars-locator ............................. 0.32 -> 0.42
+[INFO]   org.yaml:snakeyaml ...................................... 1.17 -> 1.30
+[INFO]   redis.clients:jedis ............................... 2.8.1 -> 3.0.0-rc1
+[INFO] 
+[INFO] The following dependencies in Dependencies have newer versions:
+[INFO]   com.github.ben-manes.caffeine:caffeine ................ 2.3.5 -> 2.9.2
+[INFO]   com.sepaq.commons:commons-orm ............................. 0.1 -> 0.4
+[INFO]   io.springfox:springfox-swagger-ui .................... 2.5.0 -> 2.10.5
+[INFO]   io.springfox:springfox-swagger2 ...................... 2.5.0 -> 2.10.5
+[INFO]   org.springframework.cloud:spring-cloud-starter-config ...
+[INFO]                                           1.2.3.RELEASE -> 1.4.7.RELEASE
+[INFO]   org.webjars.bower:swagger-ui-themes ................... 2.0.1 -> 2.1.0
+[INFO] 
+[INFO] The following dependencies in Plugin Dependencies have newer versions:
+[INFO]   org.apache.maven.scm:maven-scm-provider-gitexe ..... 1.9.5 -> 2.0.0-M1
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for activite-connector 4.2.0:
+[INFO] 
+[INFO] activite-connector ................................. SUCCESS [  0.837 s]
+[INFO] activite-connector-model ........................... SUCCESS [  0.319 s]
+[INFO] activite-connector-core ............................ SUCCESS [  0.235 s]
+[INFO] activite-connector-rest ............................ SUCCESS [  0.257 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.877 s
+[INFO] Finished at: 2022-01-30T14:00:25-05:00
+[INFO] ------------------------------------------------------------------------
